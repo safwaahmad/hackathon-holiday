@@ -1,0 +1,125 @@
+/* Reset and basic styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+    color: #fef6e4;
+    text-align: center;
+    background: #000;  /* Black sky as base for stars */
+    overflow: hidden; /* Prevent scrolling when stars move */
+}
+
+/* Starry background animation */
+@keyframes stars {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-100%);
+    }
+}
+
+.star {
+    position: absolute;
+    border-radius: 50%;
+    background-color: #fff;
+    opacity: 0.8;
+    animation: twinkle 1.5s ease-in-out infinite;
+}
+
+@keyframes twinkle {
+    0% {
+        opacity: 0.6;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.6;
+    }
+}
+
+header {
+    background-color: rgba(255, 182, 185, 0.9);
+    padding: 20px;
+    border: 5px dashed #ff69b4;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+    font-size: 3.5em;
+    color: #ff6347;
+    font-family: 'Press Start 2P', cursive;
+}
+
+button {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1.5em;
+    background-color: #ff69b4;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #ff6347;
+}
+
+main {
+    margin-top: 50px;
+    padding: 50px;
+    position: relative; /* For positioning stars */
+}
+
+.emoji-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.emoji {
+    font-size: 3em;
+    padding: 20px;
+    cursor: pointer;
+    background-color: transparent;
+    border: 2px solid #ff6347;
+    border-radius: 10px;
+    transition: transform 0.2s;
+}
+
+.emoji:hover {
+    transform: scale(1.2);
+}
+
+footer {
+    margin-top: 30px;
+    background-color: rgba(255, 182, 185, 0.9);
+    padding: 10px;
+    color: #ff6347;
+}
+
+footer p {
+    font-size: 1.2em;
+}
+
+.snow {
+    animation: snow 10s infinite;
+}
+
+@keyframes snow {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(100vh);
+    }
+}
+
+/* Generating stars randomly using JavaScript */

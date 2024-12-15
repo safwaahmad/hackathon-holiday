@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retro Christmas Wonderland 🎄</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>🎄 Retro Christmas Vibes - 80s & 90s Style 🎅</h1>
+        <p>🎁 Step into a nostalgic Christmas experience with classic web design and a fun emoji game! 🎮</p>
+    </header>
+
+    <main>
+        <section class="intro">
+            <h2>Welcome to the Retro Christmas Wonderland!</h2>
+            <p>Celebrate the holidays with a fun game and retro vibes from the 80s and 90s!</p>
+            <button onclick="startGame()">Start Emoji Game 🎮</button>
+        </section>
+
+        <section class="game" id="game" style="display:none;">
+            <h3>🎉 Christmas Emoji Game</h3>
+            <p>Match the emojis to their correct Christmas activities. Can you score 10 points?</p>
+            <div class="emoji-container">
+                <button class="emoji" onclick="checkAnswer('🎄')">🎄</button>
+                <button class="emoji" onclick="checkAnswer('🎅')">🎅</button>
+                <button class="emoji" onclick="checkAnswer('🎁')">🎁</button>
+            </div>
+            <p id="score">Score: 0</p>
+            <button onclick="endGame()">End Game</button>
+        </section>
+
+        <section class="snow">
+            <h3>🎶 Classic 90s Christmas Playlist</h3>
+            <audio controls autoplay loop>
+                <source src="https://www.example.com/90s-christmas-song.mp3" type="audio/mp3">
+                Your browser does not support the audio element.
+            </audio>
+        </section>
+    </main>
+
+    <footer>
+        <p>Designed by Safwan 🧑‍💻 | Merry Christmas & Happy New Year! 🎉</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
